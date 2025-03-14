@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My coffee shop</title>
+
+    <!---font awesome cdn link--->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <!---custom css file link--->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <!-- Keep header section at top -->
+    <header class="header">
+      <a href="#" class="logo"><img src="images/logo.png" alt="cafè" /> </a>
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#menu">shop</a>
+        <a href="#guide">guides</a>
+        <a href="#review">reviews</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-moon" id="theme-btn"></div>
+      </div>
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+      </div>
+      <div class="cart-items-container">
+        <div class="cart-items">
+          <span class="fas fa-times"></span>
+          <img src="images/cart-item-1.png" alt="" />
+          <div class="content">
+            <h3>cart item 01</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <div class="cart-items">
+          <span class="fas fa-times"></span>
+          <img src="images/cart-item-2.png" alt="" />
+          <div class="content">
+            <h3>cart item 02</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <div class="cart-items">
+          <span class="fas fa-times"></span>
+          <img src="images/cart-item-3.png" alt="" />
+          <div class="content">
+            <h3>cart item 03</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <div class="cart-items">
+          <span class="fas fa-times"></span>
+          <img src="images/cart-item-4.png" alt="" />
+          <div class="content">
+            <h3>cart item 04</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <a href="#" class="btn">checkout now</a>
+      </div>
+    </header>
+    <!--header section ends-->
+
+    <!-- 1. Home section - First impression -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>fresh coffee in the morning</h3>
+        <h5>
+          Our coffee is an invitation to embrace the dawn with a steaming cup of aromatic delight. As the sun rises, so does the rich essence of freshly brewed coffee, awakening the senses and creating a moment of blissful indulgence.
+        </h5>
+        <a href="#menu" class="btn">get yours now</a>
+      </div>
+    </section>
+    <!--home section ends-->
+    <!-- 2. About section - Company introduction -->
+    <section class="about" id="about">
+      <h1 class="heading"><span>about</span> us</h1>
+      <div class="row">
+        <div class="image">
+          <img src="images/about-img.jpeg" alt="">
+        </div>
+        <div class="content">
+          <h3>what makes our coffee special?</h3>
+          <p>We specialize in premium coffee beans and powder, sourced directly from sustainable farms across the world's finest coffee-growing regions. Our master roasters meticulously select and roast each batch of beans to perfection, ensuring you experience the most exceptional coffee in your own home. From single-origin specialties to signature blends, we take pride in delivering coffee that meets the highest standards of quality.</p>
+        </div>
+      </div>
+    </section>
+    <!-- about section ends -->
+    <!-- 3. Menu section - Main products -->
+    <section class="menu" id="menu">
+      <h1 class="heading">our <span>menu</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="images/menu-1.png" alt="Ethiopian Yirgacheffe" />
+          <h1>Ethiopian Yirgacheffe</h1>
+          <div class="price">$18.99 <span>$22.99</span></div>
+          <a href="#" class="btn">add to cart</a>
+          <div class="size-selection">
+            <button class="size-btn" data-size="250g">250g</button>
+            <button class="size-btn" data-size="500g">500g</button>
+            <button class="size-btn" data-size="1kg">1kg</button>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/menu-2.png" alt="Brazilian Santos" />
+          <h1>Brazilian Santos</h1>
+          <div class="price">$16.99 <span>$19.99</div>
+          <a href="#" class="btn">add to cart</a>
+          <div class="size-selection">
+            <button class="size-btn" data-size="250g">250g</button>
+            <button class="size-btn" data-size="500g">500g</button>
+            <button class="size-btn" data-size="1kg">1kg</button>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/menu-3.png" alt="Costa Rican Tarrazu" />
+          <h1>Costa Rican Tarrazu</h1>
+          <div class="price">$21.99 <span>$24.99</span></div>
+          <a href="#" class="btn">add to cart</a>
+          <div class="size-selection">
+            <button class="size-btn" data-size="250g">250g</button>
+            <button class="size-btn" data-size="500g">500g</button>
+            <button class="size-btn" data-size="1kg">1kg</button>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/menu-4.png" alt="Sumatra Mandheling" />
+          <h1>Sumatra Mandheling</h1>
+          <div class="price">$19.99 <span>$23.99</span></div>
+          <a href="#" class="btn">add to cart</a>
+          <div class="size-selection">
+            <button class="size-btn" data-size="250g">250g</button>
+            <button class="size-btn" data-size="500g">500g</button>
+            <button class="size-btn" data-size="1kg">1kg</button>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/menu-5.png" alt="Kenya AA" />
+          <h1>Kenya AA</h1>
+          <div class="price">$20.99 <span>$25.99</span></div>
+          <a href="#" class="btn">add to cart</a>
+          <div class="size-selection">
+            <button class="size-btn" data-size="250g">250g</button>
+            <button class="size-btn" data-size="500g">500g</button>
+            <button class="size-btn" data-size="1kg">1kg</button>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/menu-6.png" alt="Guatemala Antigua" />
+          <h1>Guatemala Antigua</h1>
+          <div class="price">$17.99 <span>$21.99</span></div>
+          <a href="#" class="btn">add to cart</a>
+          <div class="size-selection">
+            <button class="size-btn" data-size="250g">250g</button>
+            <button class="size-btn" data-size="500g">500g</button>
+            <button class="size-btn" data-size="1kg">1kg</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- menu section ends -->
+    <!-- 4. Brewing Guide - Value addition -->
+    <section class="brewing-guide" id="guide">
+        <h1 class="heading">Brewing <span>Guide</span></h1>
+        <div class="guide-container">
+            <div class="guide-item">
+                <i class="fas fa-coffee"></i>
+                <h3>Pour Over</h3>
+                <ul>
+                    <li>Water: 195-205°F</li>
+                    <li>Grind: Medium</li>
+                    <li>Ratio: 1:16</li>
+                    <li>Time: 2-3 minutes</li>
+                </ul>
+            </div>
+            <div class="guide-item">
+                <i class="fas fa-mug-hot"></i>
+                <h3>French Press</h3>
+                <ul>
+                    <li>Water: 200°F</li>
+                    <li>Grind: Coarse</li>
+                    <li>Ratio: 1:12</li>
+                    <li>Time: 4 minutes</li>
+                </ul>
+            </div>
+            <div class="guide-item">
+                <i class="fas fa-blender"></i>
+                <h3>Espresso</h3>
+                <ul>
+                    <li>Water: 200°F</li>
+                    <li>Grind: Fine</li>
+                    <li>Ratio: 1:2</li>
+                    <li>Time: 25-30 seconds</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Storage Tips - Educational content -->
+    <div class="storage-tips">
+        <h1 class="heading">Storage <span>Tips</span></h1>
+        <div class="tips-container">
+            <div class="tip-item">
+                <i class="fas fa-box"></i>
+                <h3>Airtight Storage</h3>
+                <p>Use opaque containers</p>
+                <p>Ensure airtight seal</p>
+                <p>Room temperature</p>
+                <p>Away from moisture</p>
+            </div>
+            <div class="tip-item">
+                <i class="fas fa-sun"></i>
+                <h3>Light Protection</h3>
+                <p>Avoid direct sunlight</p>
+                <p>Store in dark place</p>
+                <p>Use dark containers</p>
+                <p>Preserve flavors</p>
+            </div>
+            <div class="tip-item">
+                <i class="fas fa-snowflake"></i>
+                <h3>Temperature Control</h3>
+                <p>Avoid refrigeration</p>
+                <p>Keep at room temp</p>
+                <p>Prevent condensation</p>
+                <p>Maintain freshness</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Products section - Additional offerings -->
+    <section class="products" id="products">
+      <h1 class="heading">our <span>products</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+          <div class="image">
+            <img src="images/product-1.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>fresh coffee
+              (Nicaragua)</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price">$15.99 <span>$20.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+          <div class="image">
+            <img src="images/product-2.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>fresh coffee
+              (Columbia)</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">$16.99 <span>$21.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+          <div class="image">
+            <img src="images/product-3.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>fresh coffee</h3>
+            <h3>(Peru)</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price">$19.99 <span>$24.99</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 7. Subscription Plans - Premium offering -->
+    <section class="subscription" id="subscribe">
+        <h1 class="heading">Coffee <span>Subscription</span></h1>
+        <div class="subscription-plans">
+            <div class="plan">
+                <h3>Starter</h3>
+                <div class="price">$29.99/month</div>
+                <ul>
+                    <li>2 bags of coffee</li>
+                    <li>Monthly delivery</li>
+                    <li>Free shipping</li>
+                </ul>
+                <button class="btn">Subscribe Now</button>
+            </div>
+            <div class="plan featured">
+                <h3>Premium</h3>
+                <div class="price">$49.99/month</div>
+                <ul>
+                    <li>4 bags of coffee</li>
+                    <li>Monthly delivery</li>
+                    <li>Free shipping</li>
+                    <li>Brewing guide</li>
+                </ul>
+                <button class="btn">Subscribe Now</button>
+            </div>
+            <div class="plan">
+                <h3>Family</h3>
+                <div class="price">$79.99/month</div>
+                <ul>
+                    <li>6 bags of coffee</li>
+                    <li>Bi-weekly delivery</li>
+                    <li>Free shipping</li>
+                    <li>Premium accessories</li>
+                </ul>
+                <button class="btn">Subscribe Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Reviews - Social proof -->
+    <section class="review" id="review">
+      <h1 class="heading">customer's <span>review</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-mug-hot quote"></i>
+          <p>
+            I recently had the pleasure of experiencing their services, and I must say it was nothing short of exceptional. From the moment I walked in, the ambiance was inviting, and the staff were incredibly friendly. The attention to detail in every aspect, from the decor to the menu options, made my visit truly enjoyable. The coffee was a delight, showcasing a perfect blend of flavors that left me wanting more. I highly recommend this place for anyone looking for a top-notch coffee experience.
+          </p>
+          <img src="images/pic-1.png" class="user" alt="" />
+          <h3>Nishant</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-mug-hot quote"></i>
+          <p>
+            What a delightful find! This place exceeded all my expectations. The coffee was not just a beverage; it was a work of art. The flavors were rich and distinct, and the baristas clearly knew their craft. The atmosphere was cozy and inviting, making it the perfect spot to unwind or catch up with friends. The attention to quality and customer satisfaction sets this establishment apart. I'm already looking forward to my next visit.
+          </p>
+          <img src="images/pic-2.png" class="user" alt="" />
+          <h3>Sound</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-mug-hot quote"></i>
+          <p>
+            I can't express how impressed I am with the quality of both the coffee and the service. The beans they use are clearly of the highest quality, resulting in a cup of coffee that is unparalleled. The staff is not only knowledgeable but also passionate about their craft, and it reflects in every cup they serve. The cozy atmosphere and attention to cleanliness further enhance the overall experience. If you're a coffee enthusiast, this place is a must-visit. You won't be disappointed!
+          </p>
+          <img src="images/pic-3.png" class="user" alt="" />
+          <h3>Rahul Singh</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Blog section - Content marketing -->
+    <section class="blogs" id="blogs">
+      <h1 class="heading">our <span>blogs</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="images/blog-1.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="title">tasty and refreshing coffee</a>
+            <span>By Pranshu / 13th Mar, 2025</span>
+            <p>
+              Indulge in the delightful and invigorating experience of our expertly crafted coffee. Immerse yourself in the rich flavors and aromatic bliss that our coffee provides. Every sip is a journey into a world of taste and refreshment that will leave you craving for more.
+            </p>
+            <a href="#" class="btn">read more</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="images/blog-2.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="title">A Symphony of Flavors: Coffee Bliss</a>
+            <span>By Pranshu / 14th Mar, 2025</span>
+            <p>
+              Embark on a sensory journey with our expertly crafted coffee blends that create a symphony of flavors. From the robust notes to the subtle undertones, each cup is a harmonious blend that captivates the palate. Elevate your coffee experience to new heights and savor the blissful moments that unfold with every sip.
+            </p>
+            <a href="#" class="btn">read more</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="images/blog-3.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="title">Cozy Atmosphere, Exceptional Coffee</a>
+            <span>By Pranshu / 15th Mar, 2025</span>
+            <p>
+              Step into our cozy haven and experience the perfect blend of comfort and exceptional coffee. Our warm ambiance provides the ideal setting to enjoy a cup of perfection. Whether you're catching up with friends or seeking a peaceful retreat, our establishment offers more than just coffee; it provides an escape into a world of relaxation and delightful flavors.
+            </p>
+            <a href="#" class="btn">read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blogs section ends -->
+
+    <!-- 10. FAQ - Customer support -->
+    <section class="faq" id="faq">
+      <h1 class="heading">Frequently Asked <span>Questions</span></h1>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>How do you source your coffee beans?</h3>
+          <p>We directly partner with sustainable farms across premier coffee-growing regions, ensuring fair trade practices and highest quality beans.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What's the best way to store coffee beans?</h3>
+          <p>Store in an airtight container in a cool, dark place. Avoid refrigeration as beans can absorb moisture and odors.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does your coffee stay fresh?</h3>
+          <p>Our coffee is best enjoyed within 30 days of the roast date. Each package is sealed to maintain freshness and labeled with roasting date.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you offer international shipping?</h3>
+          <p>Yes, we ship worldwide! Delivery times vary by location, and we ensure proper packaging to maintain freshness during transit.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What's your return policy?</h3>
+          <p>We offer a 100% satisfaction guarantee. If you're not completely satisfied, contact us within 14 days of purchase for a full refund or replacement.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Which brewing method do you recommend for beginners?</h3>
+            <p>For beginners, we recommend starting with a French Press. It's simple to use, forgiving with grind size, and helps you understand the basics of coffee brewing. Once comfortable, you can explore pour-over or other methods.</p>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ section ends -->
+
+    <!-- 11. Contact section - Call to action -->
+    <section class="contact" id="contact">
+      <h1 class="heading"><span> contact </span> us</h1>
+
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117711.91484915413!2d86.17577081640625!3d22.784028399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e31989f0e2b5%3A0xeeec8e81ce9b344!2sJamshedpur%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1679999999999!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <form action="https://formspree.io/f/xoqzrgdz" method="POST">
+          <h3>Get in touch</h3>
+          <div class="inputBox">
+            <span><i class="fas fa-user"></i></span>
+            <input type="text" name="name" placeholder="Name" required />
+          </div>
+          <div class="inputBox">
+            <span><i class="fas fa-envelope"></i></span>
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="inputBox">
+            <span><i class="fas fa-comment"></i></span>
+            <input type="text" name="message" placeholder="Message" required />
+          </div>
+          <input type="submit" value="Contact now" class="btn" />
+        </form>        
+      </div>
+    </section>
+    <!-- contact section ends -->
+
+    <!-- 12. Newsletter - Engagement -->
+    <section class="newsletter" id="newsletter">
+      <h1 class="heading">Stay <span>Updated</span></h1>
+      <div class="newsletter-container">
+          <p>Subscribe to receive updates about new products and exclusive offers!</p>
+          <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email address" required>
+              <button type="submit" class="btn">Subscribe</button>
+          </form>
+      </div>
+  </section>
+
+    <!-- Footer - Always at bottom -->
+    <section class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>About Us</h3>
+            <p>Premium coffee beans sourced directly from sustainable farms worldwide. Experience exceptional quality in every cup.</p>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Shop</a>
+                <a href="#guide">Guides</a>
+                <a href="#review">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect With Us</h3>
+            <div class="share">
+                <a href="https://github.com/Pranshu936" class="fab fa-github"></a>
+                <a href="https://www.instagram.com/pranshukumar_07/" class="fab fa-instagram"></a>
+                <a href="https://x.com/Pranshukum30487" class="fab fa-twitter"></a>
+                <a href="https://www.linkedin.com/in/pranshu-kumar-iitm/" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-phone"></i> +91 98359 68888</p>
+            <p><i class="fas fa-envelope"></i> info@coffeeshop.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Jamshedpur, India 831001</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="credit">
+            <p>© 2024 Coffee Market. All rights reserved | Created by <span>Pranshu</span></p>
+        </div>
+    </div>
+</section>
+    <!-- footer section ends -->
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Add before </body> -->
+    <div class="notification" id="notification"></div>
+    <!--custom js file link-->
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+  </body>
+</html>

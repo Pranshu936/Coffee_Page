@@ -1,0 +1,667 @@
+/* Light Theme Variables */
+:root {
+    --main-color: #d3ad7f;
+    --main-bg: #fff;
+    --main-text: #13131a;
+    --secondary-bg: #f8f8f8;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    --header-text: #13131a;
+    --footer-bg: #13131a;
+    --footer-text: #fff;
+    --btn-text: #fff;
+    --btn-bg: #d3ad7f;
+    --link-hover: #d3ad7f;
+    --icon-color: #333333;
+    --product-text: #13131a;  /* New variable for product text */
+    --product-price: #d3ad7f; /* New variable for price text */
+    --review-text: #13131a;
+    --blog-text: #0c0c11;
+    --blog-title: #13131a;
+    --blog-date: #666;
+    --about-text: #4a4a4a;      /* More readable text color */
+    --about-heading: #13131a;   /* Darker heading for contrast */
+    --about-bg: #ffffff;        /* White background for content */
+    --about-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    --footer-heading: #fff;
+    --footer-link: #ccc;
+    --footer-border: rgba(255, 255, 255, 0.1);
+    --menu-bg: var(--secondary-bg);
+    --menu-hover-bg: var(--secondary-bg);
+    --menu-text: #13131a;  /* Black text for light theme */
+    }
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --main-color: #d3ad7f;
+    --main-bg: #13131a;
+    --main-text: #fff;
+    --secondary-bg: #1a1a24;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+    --header-text: #fff;
+    --footer-text: #fff;
+    --link-hover: #d3ad7f;
+    --product-text: #fff;     /* Product text color for dark theme */
+    --product-price: #d3ad7f; /* Price color remains same in dark theme */
+    --review-text: #fff;
+    --blog-text: #fff;
+    --blog-title: #fff;
+    --blog-date: #ccc;
+    --about-text: #e0e0e0;      /* Lighter text for dark mode */
+    --about-heading: #ffffff;    /* White headings for dark mode */
+    --about-bg: #1a1a24;        /* Darker background */
+    --about-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    --menu-bg: var(--secondary-bg);
+    --menu-hover-bg: var(--secondary-bg);
+    --menu-text: #ffffff;  /* White text for dark theme */
+    }
+
+/* Theme Transitions */
+* {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Common Theme Styles */
+body {
+    background: var(--main-bg);
+    color: var(--main-text);
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.header {
+    background: var(--main-bg);
+    border-color: var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+.navbar a {
+    color: var(--main-text);
+}
+
+.heading {
+    color: var(--main-text);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.search-form {
+    background: var(--main-bg);
+}
+
+.search-form input {
+    color: var(--main-text);
+    font-size: 1.6rem;
+}
+
+.cart-items-container {
+    background: var(--main-bg);
+}
+
+.cart-items .content h3 {
+    color: var(--main-text);
+}
+
+.box {
+    background: var(--secondary-bg);
+    border: var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+.products .box-container .box {
+    background: var(--secondary-bg);
+    text-align: center;
+    border: var(--border-color);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.review .box {
+    background: var(--secondary-bg);
+    padding: 2.5rem;
+    border: var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+.blogs .box {
+    background: var(--secondary-bg);
+    border: var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+.contact form {
+    background: var(--secondary-bg);
+}
+
+/* Footer Theme Styles */
+.footer {
+    background: var(--footer-bg);
+    padding: 6rem 2rem 2rem;
+    position: relative;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h3 {
+    color: var(--footer-heading) !important;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.footer-col p {
+    color: var(--footer-text) !important;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.footer-col .links a {
+    color: var(--footer-link) !important;
+    font-size: 1.5rem;
+    display: block;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.footer-col .links a:hover {
+    color: var(--main-color) !important;
+    transform: translateX(5px);
+}
+
+.footer-col .share a {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--footer-text) !important;
+    background: rgba(255, 255, 255, 0.1);
+    margin-right: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.footer-col .share a:hover {
+    background: var(--main-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--footer-border);
+    text-align: center;
+}
+
+.footer-bottom .credit {
+    font-size: 1.5rem;
+    color: var(--footer-text) !important;
+}
+
+.footer-bottom .credit span {
+    color: var(--main-color);
+}
+
+/* Gradient border at top of footer */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--main-color), transparent);
+}
+
+/* Theme toggle button styles */
+#theme-btn {
+    cursor: pointer;
+}
+
+#theme-btn:hover {
+    color: var(--main-color);
+}
+
+/* Header styles */
+.header .navbar a {
+    color: var(--header-text);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.header .icons div {
+    color: var(--header-text);
+    font-size: 2.2rem;
+    color: var(--icon-color);
+}
+
+.header .search-form input {
+    color: var(--header-text);
+}
+
+.header .cart-items-container .cart-items h3 {
+    color: var(--header-text);
+}
+
+/* Footer styles */
+.footer .share a {
+    color: var(--footer-text);
+    font-size: 2rem;
+}
+
+.footer .links a {
+    color: var(--footer-text);
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.footer .credit {
+    color: var(--footer-text);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+/* Hover effects */
+.header .navbar a:hover,
+.footer .links a:hover,
+.footer .share a:hover {
+    color: var(--link-hover);
+}
+
+/* Cart items container */
+.cart-items-container {
+    background: var(--main-bg);
+}
+
+.cart-items-container .cart-items .content h3 {
+    color: var(--header-text);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.cart-items-container .cart-items .content .price {
+    color: var(--main-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+/* Content text improvements */
+.box h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.box p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.products .box-container .box .content h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.review .box p {
+    color: var(--review-text);
+    font-size: 1.8rem;
+    line-height: 1.8;
+    font-weight: 400;
+    font-style: italic;
+    padding-bottom: 1.5rem;
+}
+
+.review .box h3 {
+    color: var(--review-text);
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+.review .box .stars {
+    padding: 0.5rem 0;
+}
+
+.review .box .stars i {
+    color: var(--main-color);
+    font-size: 1.7rem;
+}
+
+.review .box img {
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    height: 7rem;
+    width: 7rem;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+
+.review .box h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* Icons and buttons */
+.btn {
+    font-size: 1.7rem;
+    font-weight: 500;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Improve contrast for text on light backgrounds */
+.box p, .box h3, .content p, .content h3 {
+    color: var(--main-text);
+    text-shadow: none;
+}
+
+/* Improve icon visibility */
+.fas, .fab {
+    -webkit-text-stroke: 0.5px var(--icon-color);
+}
+
+/* Product card specific styles */
+.products .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3 {
+    color: var(--product-text) !important;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.products .box-container .box .content .price {
+    color: var(--product-price) !important;
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding: .5rem 0;
+}
+
+.products .box-container .box .content .price span {
+    color: var(--product-text);
+    font-size: 1.8rem;
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+.products .box-container .box .icons a {
+    color: var(--product-text);
+    font-size: 2rem;
+}
+
+.products .box-container .box .icons a:hover {
+    color: var(--main-color);
+}
+
+.products .box-container .box .content .stars {
+    color: var(--main-color);
+}
+
+/* Blog section improvements */
+.blogs .box {
+    background: var(--secondary-bg);
+    border: var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+.blogs .box .image {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.blogs .box .image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .box .content {
+    padding: 2.5rem;
+}
+
+.blogs .box .content .title {
+    color: var(--blog-title) !important;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: 0.3s ease;
+}
+
+.blogs .box .content .title:hover {
+    color: var(--main-color);
+}
+
+.blogs .box .content span {
+    color: var(--blog-date) !important;
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.blogs .box .content p {
+    color: var(--blog-text) !important;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.blogs .box .content .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    font-size: 1.7rem;
+    color: var(--main-text);
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.blogs .box .content .btn:hover {
+    background: var(--main-color);
+    opacity: 0.9;
+}
+
+/* Review section fixes */
+.review.section .box p,
+.review .box-container .box p {
+    color: var(--review-text) !important;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.review.section .box h3,
+.review .box-container .box h3 {
+    color: var(--review-text) !important;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* General text improvements */
+.box h3,
+.content h3,
+.box p,
+.content p {
+    color: var(--main-text) !important;
+}
+
+/* Icon visibility improvements */
+.fas,
+.fab,
+.fa {
+    -webkit-text-stroke: 0.5px var(--icon-color);
+}
+
+/* Add these new styles for About section */
+.about .row .content h3 {
+    color: var(--about-heading) !important;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.about .row .content p {
+    color: var(--about-text) !important;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    font-weight: 500;
+}
+
+/* Update the heading styles for the about section */
+.about .heading {
+    color: var(--about-heading) !important;
+}
+
+.about .heading span {
+    color: var(--main-color);
+    background: none;
+}
+
+/* Remove conflicting styles */
+.about .row .content .btn {
+    display: none;
+}
+
+/* Add container background for better contrast if needed */
+.about .row .content {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+/* Updated About section styles */
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    background: var(--about-bg);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--about-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.about .row .content h3 {
+    color: var(--about-heading) !important;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    letter-spacing: -0.5px;
+}
+
+.about .row .content p {
+    color: var(--about-text) !important;
+    font-size: 1.7rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.about .heading {
+    color: var(--about-heading) !important;
+    margin-bottom: 3rem;
+}
+
+.about .heading span {
+    color: var(--main-color);
+    background: none;
+    font-weight: 600;
+}
+
+/* Remove the button */
+.about .row .content .btn {
+    display: none;
+}
+
+/* Add specific styles for home section */
+.home .content h3 {
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.home .content h5 {
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.8rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    font-weight: 500;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes searchDropDown {
+    0% {
+        top: -20rem;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        top: 115%;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Update the menu box styles */
+.menu .box-container .box {
+    background: var(--menu-bg);
+    text-align: center;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border-color);
+    transition: none;
+}
+
+.menu .box-container .box:hover {
+    background: var(--menu-bg);
+    box-shadow: var(--box-shadow);
+    transform: none;
+}
+
+/* Remove any transform animations */
+.menu .box-container .box,
+.menu .box-container .box:hover,
+.menu .box-container .box:active {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Common Theme Styles */
+.menu .box-container .box h1 {
+    color: var(--menu-text);
+    transition: none;
+}
